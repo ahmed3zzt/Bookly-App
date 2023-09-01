@@ -1,11 +1,15 @@
 import 'dart:async';
 
+import 'package:bookly/Features/Home/presentation/views/home_view.dart';
 import 'package:bookly/constans.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../core/utils/assets.gen.dart';
 
 class SplashViewBody extends StatefulWidget {
+  const SplashViewBody({super.key});
+
   @override
   _SplashViewBodyState createState() => _SplashViewBodyState();
 }
@@ -18,26 +22,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 2),
-    );
-
-    _animationController.forward();
-
-    Timer(const Duration(seconds: 2), () {
-      setState(() {
-        _visible = true;
-      });
-    });
-
-    //  Timer(Duration(seconds: 4), () {
-    //   // Navigate to the main screen after splash screen
-    //   Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => MainScreen()),
-    //   );
-    // });
+    initSplashAnimation();
   }
 
   @override
@@ -67,5 +52,31 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ),
       ),
     );
+  }
+
+// The Fede-in Settings For Splash Screen
+  void initSplashAnimation() {
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    _animationController.forward();
+
+    Timer(const Duration(seconds: 2), () {
+      setState(() {
+        _visible = true;
+      });
+    });
+
+    navigateToHome();
+  }
+
+  void navigateToHome() {
+    Timer(Duration(seconds: 4), () {
+      // Navigate to the main screen after splash screen
+      Get.to(() => const HomeView(),
+          transition: Transition.leftToRight, duration: KDuration);
+    });
   }
 }
