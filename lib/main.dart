@@ -1,4 +1,7 @@
+import 'package:bookly/Features/Splash/presentation/views/splash_view.dart';
+import 'package:bookly/constans.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,16 +12,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('First Run'),
-        ),
-        body: const Center(
-          child: Text('Hello World!'),
-
-        ),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: KPrimaryColor,
       ),
+      home: SplashView(),
     );
   }
 }
