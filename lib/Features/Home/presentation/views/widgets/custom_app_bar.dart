@@ -14,12 +14,12 @@ class CustomAppBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Assets.images.logo.image(height: 24),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.search,
                 size: 30,
               ))

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:bookly/Features/Home/presentation/views/widgets/list_view_item.dart';
 import 'package:bookly/constans.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,7 @@ class FeaturedBooksList extends StatelessWidget {
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return Padding(
+            return const Padding(
               padding: EdgeInsets.only(right: 8),
               child: ListViewItem(),
             );
