@@ -11,6 +11,7 @@ class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashViewBodyState createState() => _SplashViewBodyState();
 }
 
@@ -73,7 +74,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Timer(Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 4), () {
       // Navigate to the main screen after splash screen
       Get.to(() => const HomeView(),
           transition: Transition.leftToRight, duration: KDuration);
