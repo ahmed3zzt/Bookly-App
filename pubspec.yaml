@@ -10,17 +10,18 @@ dependencies:
   device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  font_awesome_flutter_named: ^1.1.2+1
   get: ^4.6.5
 dev_dependencies:
+  build_runner: null
+  flutter_gen_runner: null
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  build_runner:
-  flutter_gen_runner:
 
 flutter_gen:
   output: lib/core/utils
 flutter:
   uses-material-design: true
   assets:
-   - assets/images/Logo.png
+    - assets/images/
