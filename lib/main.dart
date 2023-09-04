@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: KPrimaryColor,
       ),
-      home: SplashView(),
+      home: const SplashView(),
     );
   }
 }
