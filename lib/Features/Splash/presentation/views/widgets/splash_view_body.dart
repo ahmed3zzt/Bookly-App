@@ -76,7 +76,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void navigateToHome() {
     Timer(const Duration(seconds: 4), () {
       // Navigate to the main screen after splash screen
-      Get.to(() => const HomeView(),
+      Get.off(const HomeView(),
           transition: Transition.leftToRight, duration: KDuration);
     });
   }

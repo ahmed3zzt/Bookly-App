@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.gen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -20,8 +21,8 @@ class CustomAppBar extends StatelessWidget {
           IconButton(
               onPressed: () {},
               icon: const Icon(
-                Icons.search,
-                size: 30,
+                FontAwesomeIcons.magnifyingGlass,
+                size: 26,
               ))
         ],
       ),

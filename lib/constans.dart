@@ -5,3 +5,4 @@ import 'package:flutter/material.dart';
 const KPrimaryColor = Color(0xff100b20);
 const KDuration = Duration(milliseconds: 700);
 const KHPadding = 24.0;
+const KGSecrtaFine = 'GT Scerta Fine';
